@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+Body{
+    font-size: 100%;
+    text-align: center;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background:linear-gradient(to right, #2F2325 , #8E5D52 );
+    color: #FFF2E7;
+    font-family: 'Sarala', sans-serif;  
+    margin: 5%;
+}
+
+.conteudo {
+    margin-bottom: 30px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    
+}
+  
+.conteudo-principal-escrito-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2E7;
+}
+  
+.conteudo-principal-escrito-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ECD6C4;
+}
+
+.conteudo-principal-imagem {
+    height: 350px;
+    border-radius: 100%;
+}
+
+
+.buttons{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    justify-content: space-around;
+    font-size: 15px;
+    margin: 5px;
+    padding: 5px;
+    width:270px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ECD6C4;
+    transition: all 400ms ease;
+}
+
+button:hover{
+    background-color: rgba(7, 124, 26, 0.53);
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+    color: #2F2325;
+}
+
+h1{
+    font-size: 27px;
+    font-family: 'Sarala', sans-serif;
+}
+
+h2{
+    font-size: 20px;
+    
+}
+
+h3, p{
+    font-size: 16px;
+}
+
+.tpback, h3{
+    margin-top: 3%;
+}
+
+.multiline-text{
+    white-space: pre-line;
+}
+
+.image-itens{
+
+    margin-top: 4%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid rgba(7, 124, 26, 0.53);
+
+}
+
+iframe{
+    width: 450px;
+    height: 255px;
+    margin: 5%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.grafico {
+    width: 45%;
+    border: 1px solid #ddd;
+    
+   
+padding: 10px;
+}
+
+
+
