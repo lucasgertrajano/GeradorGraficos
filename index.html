@@ -43,41 +43,45 @@
     <script>
         var myChart;
 
+ 
         document.getElementById('pizzaButton').addEventListener('click', function () {
-            var percentagesInput = prompt("Digite as porcentagens separadas por vírgulas:");
+    var percentagesInput = prompt("Digite as porcentagens separadas por vírgulas:");
+    var labelsInput = prompt("Digite os rótulos (Acerto ou Erro) separados por vírgulas:");
 
-            if (percentagesInput) {
-                if (myChart) {
-                    myChart.destroy();
-                }
+    if (percentagesInput && labelsInput) {
+        if (myChart) {
+            myChart.destroy();
+        }
 
-                var percentagesArray = percentagesInput.split(',').map(Number);
+        var percentagesArray = percentagesInput.split(',').map(Number);
+        var labelsArray = labelsInput.split(',');
 
-                var ctx = document.getElementById('myChart').getContext('2d');
-                myChart = new Chart(ctx, {
-                    type: 'pie',
-                    data: {
-                        labels: percentagesArray.map(function (val, index) {
-                            return 'Acerto ' +  (index + 1) + ': ' + val;
-                        }),
-                        datasets: [{
-                            data: percentagesArray,
-                            backgroundColor: [
-                                'red',
-                                'blue',
-                                'green',
-                                'yellow',
-                                'orange'
-                            ],
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                    }
-                });
+        var ctx = document.getElementById('myChart').getContext('2d');
+        myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labelsArray.map(function (label, index) {
+                    return label + ': ' + percentagesArray[index] + '%';
+                }),
+                datasets: [{
+                    data: percentagesArray,
+                    backgroundColor: [
+                        'green',
+                        'red',
+                        'blue'
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
             }
         });
+    }
+});
+
+            
+            
 
         document.getElementById('barraButton').addEventListener('click', function () {
             var dataInput = prompt("Digite os valores para o gráfico de barra separados por vírgulas:");
